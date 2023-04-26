@@ -1,0 +1,86 @@
+.center {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  }
+  
+/* Styling for the main sections */
+section {
+	padding: 2em;
+	margin: 2em 0;
+	border: 1px solid #ccc;
+	border-radius: 50px;
+	color: #fff;
+	width: 80%;
+  }
+  
+  section h2 {
+	margin-top: 0;
+  }
+  
+  /* Styling for the "About Us" section */
+  .about p {
+	line-height: 1.5;
+  }
+  
+  /* Styling for the "Our Team" section */
+  .team h2 {
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+}
+  .team {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+  }
+  
+  .trainer {
+	margin: 1em;
+	text-align: center;
+  }
+  
+  .trainer img {
+	width: 200px;
+	height: 200px;
+	object-fit: cover;
+	border-radius: 50%;
+	border: 2px solid #ccc;
+  }
+  
+  .trainer h3 {
+	margin-top: 0.5em;
+  }
+  
+  .trainer p {
+	margin-bottom: 0;
+	color: #666;
+  }
+  
+  /* Styling for the "Our Facilities" section */
+  .facilities {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+  }
+  
+  .facility {
+	margin: 1em;
+	text-align: center;
+  }
+  
+  .facility img {
+	width: 300px;
+	height: 200px;
+	object-fit: cover;
+	border-radius: 5px;
+  }
+  
+  .facility h3 {
+	margin-top: 0.5em;
+  }
+  
+  .facility p {
+	margin-bottom: 0;
+	color: #666;
+  }
