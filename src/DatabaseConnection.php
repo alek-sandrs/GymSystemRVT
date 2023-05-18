@@ -34,7 +34,8 @@ class DatabaseConnection
         CREATE TABLE IF NOT EXISTS Workouts (
             WorkoutID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
             WorkoutName VARCHAR(50) NOT NULL,
-            Description VARCHAR(255)
+            Description VARCHAR(255),
+            Price DECIMAL(8, 2) NOT NULL
         );
         
         INSERT INTO Workouts (WorkoutName, Description, Price) 

@@ -79,8 +79,6 @@ $router->map('POST', '/admin-panel/subscriptions', [App\Controller\AdminPanelCon
 $router->map('GET', '/purchase', [App\Controller\HomeController::class, 'purchase']);
 $router->map('POST', '/purchase', [App\Controller\HomeController::class, 'purchase']);
 
-
-
 try {
     $response = $router->dispatch($request);
 } catch (NotFoundException $e) {

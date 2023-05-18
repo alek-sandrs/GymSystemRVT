@@ -10,7 +10,8 @@ class ControlPanel
     {
         $obj = new DatabaseConnection();
         $conn = $obj->getConnection();
-        $stmt = $conn->prepare('SELECT 
+        $stmt = $conn->prepare(
+        'SELECT 
             users.uID, 
             users.Username, 
             users.LastName, 
@@ -65,27 +66,27 @@ class ControlPanel
         return $earnedMoney;
     }
 
-    public function searchUsers($search)
-    {
-        $obj = new DatabaseConnection();
-        $conn = $obj->getConnection();
-        $stmt = $conn->prepare('SELECT 
-            users.uID, 
-            users.Username, 
-            users.LastName, 
-            users.isAdmin, 
-            users.isTrainer, 
-            IFNULL(workouts.WorkoutName, "NONE") AS WorkoutName
-        FROM users
-            LEFT JOIN purchases
-        ON users.uID = purchases.uID
-            LEFT JOIN workouts
-        ON purchases.WorkoutID = workouts.WorkoutID
-        WHERE users.Username LIKE :search OR users.LastName LIKE :search');
-        $stmt->bindValue(':search', '%' . $search . '%');
-        $stmt->execute();
-        $users = $stmt->fetchAll();
-    }
+    // public function searchUsers($search)
+    // {
+    //     $obj = new DatabaseConnection();
+    //     $conn = $obj->getConnection();
+    //     $stmt = $conn->prepare('SELECT 
+    //         users.uID, 
+    //         users.Username, 
+    //         users.LastName, 
+    //         users.isAdmin, 
+    //         users.isTrainer, 
+    //         IFNULL(workouts.WorkoutName, "NONE") AS WorkoutName
+    //     FROM users
+    //         LEFT JOIN purchases
+    //     ON users.uID = purchases.uID
+    //         LEFT JOIN workouts
+    //     ON purchases.WorkoutID = workouts.WorkoutID
+    //     WHERE users.Username LIKE :search OR users.LastName LIKE :search');
+    //     $stmt->bindValue(':search', '%' . $search . '%');
+    //     $stmt->execute();
+    //     $users = $stmt->fetchAll();
+    // }
 
     public function deleteUser()
     {
@@ -133,17 +134,23 @@ class ControlPanel
     {
         $id = $_POST['uID'];
         $username = $_POST['username'];
+        $name = $_POST['name'];
+        $lastName = $_POST['lastName'];
+        $email = $_POST['email'];
         // $password = $_POST['password'];
         $isAdmin = $_POST['isAdmin'];
         $isTrainer = $_POST['isTrainer'];
 
         $obj = new DatabaseConnection();
         $conn = $obj->getConnection();
-        $stmt = $conn->prepare('UPDATE users SET username = :username,
+        $stmt = $conn->prepare('UPDATE users SET username = :username, name = :name, lastName = :lastName, email = :email,
         --  password = :password, 
          isAdmin = :isAdmin, isTrainer = :isTrainer WHERE uID = :id');
         $stmt->bindValue(':id', $id);
         $stmt->bindValue(':username', $username);
+        $stmt->bindValue(':name', $name);
+        $stmt->bindValue(':email', $email);
+        $stmt->bindValue(':lastName', $lastName);
         // $stmt->bindValue(':password', $password);
         $stmt->bindValue(':isAdmin', $isAdmin);
         $stmt->bindValue(':isTrainer', $isTrainer);
@@ -237,15 +244,15 @@ class ControlPanel
         $stmt->execute();
     }
 
-    public function searchWorkouts()
-    {
-        $obj = new DatabaseConnection();
-        $conn = $obj->getConnection();
-        $stmt = $conn->prepare('SELECT * FROM workouts WHERE WorkoutName LIKE :search;');
-        $stmt->bindValue(':search', '%' . $_GET['search'] . '%');
-        $stmt->execute();
-        $workouts = $stmt->fetchAll();
+    // public function searchWorkouts()
+    // {
+    //     $obj = new DatabaseConnection();
+    //     $conn = $obj->getConnection();
+    //     $stmt = $conn->prepare('SELECT * FROM workouts WHERE WorkoutName LIKE :search;');
+    //     $stmt->bindValue(':search', '%' . $_GET['search'] . '%');
+    //     $stmt->execute();
+    //     $workouts = $stmt->fetchAll();
 
-        return $workouts;
-    }
+    //     return $workouts;
+    // }
 }

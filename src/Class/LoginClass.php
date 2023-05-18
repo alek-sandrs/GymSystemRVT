@@ -32,6 +32,10 @@ class LoginClass
                     }
                 }
             }
+        } else {
+            $_SESSION['error'] = 'Please fill in all fields!';
+
+            return new \Laminas\Diactoros\Response\RedirectResponse('/login');
         }
     }
 }

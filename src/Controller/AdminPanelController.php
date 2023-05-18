@@ -98,7 +98,8 @@ class AdminPanelController extends DefaultController
 
         $obj = new DatabaseConnection();
         $conn = $obj->getConnection();
-        $stmt = $conn->prepare('SELECT 
+        $stmt = $conn->prepare(
+        'SELECT 
             users.uID, 
             users.Username, 
             users.LastName, 

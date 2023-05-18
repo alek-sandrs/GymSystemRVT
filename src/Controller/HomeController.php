@@ -56,6 +56,12 @@ class HomeController extends DefaultController
             $obj = new LoginClass();
             $obj->login();
 
+            $redirectResponse = $obj->login();
+            
+            if ($redirectResponse instanceof \Laminas\Diactoros\Response\RedirectResponse) {
+                return $redirectResponse;
+            }
+
             return new \Laminas\Diactoros\Response\RedirectResponse('/profile');
         }
 
