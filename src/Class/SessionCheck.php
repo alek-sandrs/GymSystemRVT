@@ -6,7 +6,6 @@ class SessionCheck
 {
     public function checkProfile()
     {
-        // var_dump($_SESSION['user']);
         if (!isset($_SESSION['user'])) {
             return new \Laminas\Diactoros\Response\RedirectResponse('/registration');
 
@@ -16,6 +15,17 @@ class SessionCheck
     public function checkLogIn()
     {
         if (isset($_SESSION['user'])) {
+            return new \Laminas\Diactoros\Response\RedirectResponse('/profile');
+        }
+    }
+
+    public function checkAdmin()
+    {
+        if (!isset($_SESSION['user'])) {
+            return new \Laminas\Diactoros\Response\RedirectResponse('/login');
+        }
+
+        if ($_SESSION['user']['isAdmin'] != 1) {
             return new \Laminas\Diactoros\Response\RedirectResponse('/profile');
         }
     }

@@ -3,7 +3,7 @@
         'name' => 'alocek/gymsystemrvt',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '0ee97958b34371b2dab08866d6c99b776d758d26',
+        'reference' => 'd7a755118d2636bb49d09470d88434679b80bfa6',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'alocek/gymsystemrvt' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '0ee97958b34371b2dab08866d6c99b776d758d26',
+            'reference' => 'd7a755118d2636bb49d09470d88434679b80bfa6',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

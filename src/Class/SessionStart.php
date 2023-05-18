@@ -9,13 +9,16 @@ class SessionStart {
     {
         $_SESSION['user'] = [
             'uID' => $row['uID'],
-            'username' => $row['username'],
+            'username' => $row['Username'],
+            'email' => $row['Email'],
+            'Name' => $row['Name'],
+            'lastName' => $row['LastName'],
             'isAdmin' => $row['isAdmin'],
             'isTrainer' => $row['isTrainer']
         ];
     }
 
-    public function get() 
+    public static function get() 
     {
         return $_SESSION['user'];
     }

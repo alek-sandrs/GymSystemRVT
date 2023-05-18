@@ -209,6 +209,7 @@ a{
 	position: relative;
 	transition: var(--transition);
 }
+
 .price-card:hover{
 	transform: scale(1.1);
 }
@@ -246,10 +247,22 @@ a{
 	font-size: 25px;
 	text-transform: uppercase;
 }
+
 .price-card ul li{
 	margin-top: .5rem;
 	color: #fff;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: normal;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 7;
+	min-height: 170px;
+	max-height: 170px; 
 }
+
 .price-card a{
 	padding: .8rem 1.5rem;
 	margin-top: 1rem;

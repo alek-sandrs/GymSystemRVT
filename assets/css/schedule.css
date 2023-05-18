@@ -1,0 +1,77 @@
+.schedule-center {
+    display: flex;
+    justify-content: center;
+}
+
+.schedule-center h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 20px 0;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.schedule h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 20px 0;
+  text-align: center;
+}
+
+/* Table */
+.schedule table {
+  border-collapse: collapse;
+  margin: 0 auto;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Head */
+.schedule thead {
+  background-color: #f9f9f9;
+}
+
+/* Table Head Cells */
+.schedule th {
+  padding: 12px 15px;
+  text-align: left;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #f9f9f9;
+}
+
+/* Table Rows */
+.schedule tbody tr {
+  border-bottom: 1px solid #ccc;
+}
+
+/* Table Data Cells */
+.schedule td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+/* Book Button */
+.schedule .book-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+/* Book Button Hover */
+.schedule .book-btn:hover {
+  background-color: #3e8e41;
+}
+
+.b h1 {
+  font-size: 36px;
+  color: #fff;
+  font-weight: bold;
+  margin: 20px 0;
+  text-align: center;
+}

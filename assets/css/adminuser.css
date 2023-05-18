@@ -1,0 +1,85 @@
+/* Set background color and font */
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Style the navigation bar */
+  .navbar {
+    /* background-color: #333; */
+    color: #fff;
+  }
+  
+  .navbar-item {
+    color: #fff;
+  }
+  
+  /* Style the logout button */
+  .button.is-danger {
+    background-color: #ff3860;
+    border-color: #ff3860;
+  }
+  
+  .button.is-danger:hover {
+    background-color: #f7003f;
+    border-color: #f7003f;
+  }
+  
+  /* Style the table */
+  .table {
+    margin-top: 20px;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .table th,
+  .table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .table th {
+    background-color: #f2f2f2;
+    color: #333;
+  }
+  
+  .table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .table tbody tr:hover {
+    background-color: #ddd;
+  }
+  
+  /* Set container width and center it */
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  
+  /* Set title style */
+  .title {
+    margin-top: 20px;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+  }
+
+  .links a {
+    color: #f7003f;
+  }
+
+.edit-form input {
+  margin-bottom: 10px;
+  width: 500px;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit-form form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Admin Page</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css" integrity="sha512-JMYYaUUi7/62sq/2uVcNXYO09ouuVScDIul9X58mQixO5A5R0Zi/ZBZlHTg3Yk3lWd4MiknDE9gLeohEh3nmqw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+          Admin Page
+        </a>
+      </div>
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <a class="button is-danger" href="/logout">
+            Logout
+          </a>
+        </div>
+      </div>
+    </nav>
+    <section class="section">
+      <div class="container">
+        <h1 class="title">User Information</h1>
+        <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+          <thead>
+            <tr>
+              <th>Email</th>
+              <th>Username</th>
+              <th>Subscription</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>user1@example.com</td>
+              <td>user1</td>
+              <td>Basic</td>
+            </tr>
+            <tr>
+              <td>user2@example.com</td>
+              <td>user2</td>
+              <td>Premium</td>
+            </tr>
+            <!-- More user rows here -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </body>
+</html>

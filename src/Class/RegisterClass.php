@@ -52,8 +52,9 @@ class RegisterClass
                 }
 
                 $password = password_hash($password, PASSWORD_DEFAULT);
-                
-                $sql = "INSERT INTO users (username, password, isAdmin, isTrainer) VALUES ('$username', '$password', '$isAdmin', '$isTrainer')";
+                $registrationDate = date('Y-m-d H:i:s');
+
+                $sql = "INSERT INTO users (username, password, RegistrationDate, isAdmin, isTrainer) VALUES ('$username', '$password', '$registrationDate', '$isAdmin', '$isTrainer')";
                 $conn->exec($sql);
 
                 $_SESSION['message'] = 'You have successfully registered!';

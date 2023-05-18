@@ -1,0 +1,38 @@
+.workout-actions {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.workout-actions a {
+    margin-top: 15px;
+    color: #000;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background-color: #4CAF50;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.workout-actions a:hover {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+.edit-form textarea {
+    min-width: 500px;
+    max-width: 500px;
+    height: 100px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.description {
+    max-width: 400px;
+    white-space: nowrap; /* запрет переноса строк */
+    overflow: hidden; /* скрытие текста, выходящего за границы блока */
+    text-overflow: ellipsis; /* отображение трех точек в конце */
+  }

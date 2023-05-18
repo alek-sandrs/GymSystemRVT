@@ -49,63 +49,22 @@
 	<div class="pricing-sec">
 		<h1 class="section-title">Pricing</h1>
 		<div class="pricing-row">
+			<?php foreach ($workouts as $workout) {?>
 			<div class="price-card">
-				<h4>$49</h4>
-				<h3 class="price-title">Starter</h3>
+				<h4>$<?= $workout['Price'] ?></h4>
+				<h3 class="price-title"><?= $workout['WorkoutName'] ?></h3>
 				<ul>
-					<li>Edit this text</li>
-					<li>Edit this text</li>
-					<li>Edit this text</li>
-					<li>Edit this text</li>
-					<li>Edit this text</li>
-					<li>Edit this text</li>
+					<li><?= $workout['Description'] ?></li>
 				</ul>
 				<?php 
 					if (!isset($_SESSION['user'])) {
-						echo '<a href="/registration">Purchase</a>';
+						echo '<a href="/login">Purchase</a>';
 					} else {
-						echo '<a href="/purchase">Purchase</a>';
+						echo "<a href='/purchase?WorkoutID={$workout['WorkoutID']}'>Purchase</a>";
 					}
 				?>
 			</div>
-			<div class="price-card">
-				<h4>$99</h4>
-				<h3 class="price-title">Professional</h3>
-				<ul>
-					<li>Edit this text</li>
-					<li>Edit this text</li>
-					<li>Edit this text</li>
-					<li>Edit this text</li>
-					<li>Edit this text</li>
-					<li>Edit this text</li>
-				</ul>
-				<?php 
-					if (!isset($_SESSION['user'])) {
-						echo '<a href="/registration">Purchase</a>';
-					} else {
-						echo '<a href="/purchase">Purchase</a>';
-					}
-				?>
-			</div>
-			<div class="price-card">
-				<h4>$199</h4>
-				<h3 class="price-title">Ultra</h3>
-				<ul>
-					<li>Edit this text</li>
-					<li>Edit this text</li>
-					<li>Edit this text</li>
-					<li>Edit this text</li>
-					<li>Edit this text</li>
-					<li>Edit this text</li>
-				</ul>
-				<?php 
-					if (!isset($_SESSION['user'])) {
-						echo '<a href="/registration">Purchase</a>';
-					} else {
-						echo '<a href="/purchase">Purchase</a>';
-					}
-				?>
-			</div>
+			<?php } ?>
 		</div>
 	</div>
 	<div class="gallery-sec">

@@ -1,13 +1,5 @@
 <div class="wrapper"> 
     <div class="welcome-container">
-        <h1 class="welcome-heading">Hi, <?= $user['username']?><b></b>. Welcome to our site.</h1>
-        
-        <?php if ($workout) {?>
-            <h3>Your current workout pack is <?= $workout['WorkoutName'] ?></h3>
-        <?php } else { ?>
-            <h3>You don't have an active workout pack</h3>
-        <?php } ?>
-        <br>
         <?php
             if (isset($_SESSION['message'])) {
                 echo '
@@ -26,9 +18,15 @@
             }
             unset($_SESSION['error']);
         ?>
+        <h1 class="welcome-heading">Reset password</h1>
         <p class="welcome-buttons">
-            <a href="/profile/reset-password" class="welcome-button reset-password">Reset Your Password</a>
-            <a href="/logout" class="welcome-button logout">Sign Out of Your Account</a>
+            <div class="edit-form">
+                <form action="/profile/reset-password" method="POST">
+                    <input type="password" name="password" placeholder="New Password">
+                    <input type="password" name="confirm-password" placeholder="Confirm New Password">
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
         </p>
     </div>
 </div>

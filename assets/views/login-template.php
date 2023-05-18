@@ -2,7 +2,6 @@
     <div class="send-center">
         <h2>Login</h2>
         <p>Please fill this form to create an account.</p>
-
             <?php
             if (isset($_SESSION['message'])) {
                 echo '
